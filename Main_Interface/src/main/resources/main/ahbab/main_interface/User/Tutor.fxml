@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.ahbab.main_interface.User.Tutor">
+   <children>
+      <Button fx:id="Tutorlogin" layoutX="224.0" layoutY="85.0" mnemonicParsing="false" onAction="#tutorlogin" text="Sign up/Sign in as a Tutor" />
+      <Button fx:id="GetTeachers" layoutX="258.0" layoutY="210.0" mnemonicParsing="false" onAction="#onGetteachers" text="Get Teachers" />
+      <Text fx:id="TutorTExt1" layoutX="247.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Looking for tuitons?" />
+      <Text fx:id="Teacherfindtext" layoutX="211.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Looking for Coursewise Teachers?" />
+      <Button fx:id="back" layoutX="30.0" layoutY="361.0" mnemonicParsing="false" onAction="#gotoGuestscreen" text="Back" />
+   </children>
+</AnchorPane>

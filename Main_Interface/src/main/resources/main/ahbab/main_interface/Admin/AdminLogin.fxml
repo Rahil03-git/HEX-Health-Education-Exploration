@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="800.0" prefWidth="1200.0" styleClass="gradient-background-red" stylesheets="@../styles/modern.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.ahbab.main_interface.Admin.AdminScreenController">
+   <center>
+      <VBox styleClass="flex-center">
+         <children>
+            <VBox styleClass="card, animate-slide-down">
+               <children>
+                  <!-- Header -->
+                  <VBox styleClass="card-header">
+                     <children>
+                        <Text styleClass="header-text, hover-glow" text="Admin Portal">
+                           <font>
+                              <Font name="Segoe UI Bold" size="32.0" />
+                           </font>
+                        </Text>
+                        <Text styleClass="subheader-text" text="Administrative Access to H.E.X">
+                           <font>
+                              <Font name="Segoe UI" size="16.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+
+                  <!-- Login Form -->
+                  <VBox styleClass="flex-column">
+                     <children>
+                        <VBox styleClass="form-group">
+                           <children>
+                              <Label styleClass="form-label" text="Admin Username">
+                                 <font>
+                                    <Font name="Segoe UI Semibold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="adminname" promptText="Enter admin username" styleClass="text-field" />
+                           </children>
+                        </VBox>
+
+                        <VBox styleClass="form-group">
+                           <children>
+                              <Label styleClass="form-label" text="Admin Password">
+                                 <font>
+                                    <Font name="Segoe UI Semibold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <PasswordField fx:id="adminpassword" promptText="Enter admin password" styleClass="password-field" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+
+                  <!-- Action Button -->
+                  <VBox styleClass="spacing-md">
+                     <children>
+                        <Button fx:id="loginBtn" mnemonicParsing="false" onAction="#WelcomeScreen" prefHeight="48.0" prefWidth="240.0" styleClass="btn, btn-danger, hover-lift" text="Admin Login" />
+                     </children>
+                  </VBox>
+
+                  <!-- Back Button -->
+                  <Button fx:id="backBtn" mnemonicParsing="false" onAction="#gotoGuestscreen" styleClass="btn, btn-ghost" text="← Back to Home" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

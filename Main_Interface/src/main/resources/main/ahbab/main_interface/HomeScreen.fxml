@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="800.0" prefWidth="1200.0" styleClass="gradient-background" stylesheets="@styles/modern.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.ahbab.main_interface.HomeScreenController">
+   <center>
+      <VBox styleClass="container, animate-fade-in">
+         <children>
+            <!-- Logo and Title Section -->
+            <VBox styleClass="card-header, animate-scale-in">
+               <children>
+                  <StackPane styleClass="logo-container">
+                     <children>
+                        <Circle fill="#ffffff" opacity="0.1" radius="120.0" />
+                        <ImageView fx:id="logo" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="logo-image, hover-scale">
+                           <image>
+                              <Image url="@H.E.X%20demo.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </StackPane>
+                  
+                  <Text fx:id="WelcomeText1" styleClass="title-text, animate-pulse" text="H.E.X">
+                     <font>
+                        <Font name="Segoe UI Bold" size="48.0" />
+                     </font>
+                  </Text>
+                  
+                  <Text fx:id="WelcomeText2" styleClass="subtitle-text" text="Health • Education • eXploration">
+                     <font>
+                        <Font name="Segoe UI" size="20.0" />
+                     </font>
+                  </Text>
+               </children>
+            </VBox>
+            
+            <!-- Description -->
+            <VBox styleClass="spacing-lg, animate-slide-up">
+               <children>
+                  <Text styleClass="body-text" text="Your comprehensive companion for essential services" textAlignment="CENTER" wrappingWidth="600.0">
+                     <font>
+                        <Font name="Segoe UI" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text styleClass="body-text" text="Connecting you to healthcare, education, and exploration opportunities" textAlignment="CENTER" wrappingWidth="600.0">
+                     <font>
+                        <Font name="Segoe UI" size="16.0" />
+                     </font>
+                  </Text>
+               </children>
+            </VBox>
+
+            <!-- Action Buttons -->
+            <HBox styleClass="flex-center, spacing-lg, animate-slide-up">
+               <children>
+                  <Button fx:id="userLoginBtn" mnemonicParsing="false" onAction="#onUserLogin" prefHeight="50.0" prefWidth="180.0" styleClass="btn, btn-primary, hover-lift" text="User Login" />
+
+                  <Button fx:id="adminLoginBtn" mnemonicParsing="false" onAction="#onAdminLogin" prefHeight="50.0" prefWidth="180.0" styleClass="btn, btn-danger, hover-lift" text="Admin Login" />
+
+                  <Button fx:id="guestBtn" mnemonicParsing="false" onAction="#onGuestAccess" prefHeight="50.0" prefWidth="180.0" styleClass="btn, btn-outline, hover-lift" text="Guest Access" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   
+   <!-- Footer -->
+   <bottom>
+      <HBox styleClass="flex-center, padding-md">
+         <children>
+            <Text styleClass="body-text" text="© 2025 H.E.X Application - All rights reserved">
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+               <fill>
+                  <Color opacity="0.7" red="1.0" green="1.0" blue="1.0" />
+               </fill>
+            </Text>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>

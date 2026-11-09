@@ -1,0 +1,168 @@
+/* H.E.X Modern Animations */
+
+/* ========== KEYFRAME ANIMATIONS ========== */
+@keyframes fadeIn {
+    from {
+        -fx-opacity: 0;
+    }
+    to {
+        -fx-opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from { 
+        -fx-translate-y: 30; 
+        -fx-opacity: 0; 
+    }
+    to { 
+        -fx-translate-y: 0; 
+        -fx-opacity: 1; 
+    }
+}
+
+@keyframes slideDown {
+    from { 
+        -fx-translate-y: -30; 
+        -fx-opacity: 0; 
+    }
+    to { 
+        -fx-translate-y: 0; 
+        -fx-opacity: 1; 
+    }
+}
+
+@keyframes slideLeft {
+    from { 
+        -fx-translate-x: 30; 
+        -fx-opacity: 0; 
+    }
+    to { 
+        -fx-translate-x: 0; 
+        -fx-opacity: 1; 
+    }
+}
+
+@keyframes slideRight {
+    from { 
+        -fx-translate-x: -30; 
+        -fx-opacity: 0; 
+    }
+    to { 
+        -fx-translate-x: 0; 
+        -fx-opacity: 1; 
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        -fx-scale-x: 0.9;
+        -fx-scale-y: 0.9;
+        -fx-opacity: 0;
+    }
+    to {
+        -fx-scale-x: 1;
+        -fx-scale-y: 1;
+        -fx-opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% { -fx-scale-x: 1; -fx-scale-y: 1; }
+    50% { -fx-scale-x: 1.05; -fx-scale-y: 1.05; }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { -fx-translate-y: 0; }
+    40% { -fx-translate-y: -10; }
+    60% { -fx-translate-y: -5; }
+}
+
+@keyframes rotate {
+    from { -fx-rotate: 0; }
+    to { -fx-rotate: 360; }
+}
+
+@keyframes shake {
+    0%, 100% { -fx-translate-x: 0; }
+    25% { -fx-translate-x: -5; }
+    75% { -fx-translate-x: 5; }
+}
+
+/* ========== ANIMATION CLASSES ========== */
+.animate-fade-in {
+    -fx-animation: fadeIn 0.6s ease-out;
+}
+
+.animate-slide-up {
+    -fx-animation: slideUp 0.5s ease-out;
+}
+
+.animate-slide-down {
+    -fx-animation: slideDown 0.5s ease-out;
+}
+
+.animate-slide-left {
+    -fx-animation: slideLeft 0.5s ease-out;
+}
+
+.animate-slide-right {
+    -fx-animation: slideRight 0.5s ease-out;
+}
+
+.animate-scale-in {
+    -fx-animation: scaleIn 0.4s ease-out;
+}
+
+.animate-pulse {
+    -fx-animation: pulse 2s ease-in-out infinite;
+}
+
+.animate-bounce {
+    -fx-animation: bounce 1s ease-out;
+}
+
+.animate-rotate {
+    -fx-animation: rotate 1s linear infinite;
+}
+
+.animate-shake {
+    -fx-animation: shake 0.5s ease-in-out;
+}
+
+/* ========== HOVER ANIMATIONS ========== */
+.hover-lift:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 8, 0, 0, 4);
+    -fx-translate-y: -2;
+}
+
+.hover-scale:hover {
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.hover-glow:hover {
+    -fx-effect: dropshadow(gaussian, rgba(37,99,235,0.4), 12, 0, 0, 0);
+}
+
+/* ========== TRANSITION EFFECTS ========== */
+.smooth-transition {
+    -fx-transition: all 0.3s ease;
+}
+
+.fast-transition {
+    -fx-transition: all 0.15s ease;
+}
+
+.slow-transition {
+    -fx-transition: all 0.5s ease;
+}
+
+/* ========== LOADING ANIMATIONS ========== */
+.loading-spinner {
+    -fx-animation: rotate 1s linear infinite;
+}
+
+.loading-dots {
+    -fx-animation: pulse 1.5s ease-in-out infinite;
+}

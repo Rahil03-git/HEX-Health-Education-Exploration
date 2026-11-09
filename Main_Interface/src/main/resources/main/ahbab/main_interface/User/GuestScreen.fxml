@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="800.0" prefWidth="1200.0" styleClass="gradient-background-light" stylesheets="@../styles/modern.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.ahbab.main_interface.User.GuestScreenController">
+
+   <!-- Header -->
+   <top>
+      <VBox styleClass="container">
+         <children>
+            <MenuBar fx:id="InitialMenuBar">
+               <menus>
+                  <Menu fx:id="AccountMenu" text="Account">
+                     <items>
+                        <MenuItem text="Sign In" onAction="#Login" />
+                        <MenuItem text="Sign Up" onAction="#setnewaccount" />
+                        <SeparatorMenuItem/>
+                        <MenuItem text="Logout" onAction="#logoutuser" />
+                        <MenuItem text="Delete Account" onAction="#deleteAccount" />
+                     </items>
+                  </Menu>
+                  <Menu fx:id="AdminMenu" text="Admin">
+                     <items>
+                        <MenuItem fx:id="adminsignin" text="Admin Login" onAction="#setAdminMenu" />
+                        <MenuItem text="Developer Login" onAction="#setDevMenu" />
+                     </items>
+                  </Menu>
+                  <Menu fx:id="HelpMenu" text="Help">
+                     <items>
+                        <MenuItem text="About" onAction="#About" />
+                        <MenuItem text="Contact" onAction="#Contact" />
+                        <MenuItem text="Report a Bug" onAction="#BugReport" />
+                     </items>
+                  </Menu>
+                  <Menu text="Chat">
+                     <items>
+                        <MenuItem text="Open Chat" onAction="#openuserchatui" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+            <Text styleClass="header-text, animate-fade-in" text="Welcome to H.E.X">
+               <font>
+                  <Font name="Segoe UI Bold" size="36.0" />
+               </font>
+            </Text>
+            <Text styleClass="subheader-text" text="Explore our services as a guest">
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+   </top>
+
+   <center>
+      <ScrollPane fitToWidth="true" styleClass="transparent">
+         <content>
+            <VBox styleClass="container, spacing-xl">
+               <children>
+                  <!-- Health Services Section -->
+                  <VBox styleClass="spacing-lg, animate-slide-up">
+                     <children>
+                        <Text styleClass="header-text" text="Health Services">
+                           <font>
+                              <Font name="Segoe UI Semibold" size="24.0" />
+                           </font>
+                        </Text>
+
+                        <GridPane hgap="20.0" vgap="20.0" styleClass="flex-center">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="200.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="200.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="200.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints vgrow="SOMETIMES" />
+                           </rowConstraints>
+
+                           <children>
+                              <VBox styleClass="card, hover-lift, spacing-md" GridPane.columnIndex="0">
+                                 <children>
+                                    <Text styleClass="header-text" text="🏥 Health Tests" />
+                                    <Text styleClass="body-text" text="Schedule and manage medical tests" />
+                                    <Button fx:id="healthTestsBtn" mnemonicParsing="false" onAction="#gotoHealthTests" styleClass="btn, btn-primary" text="View Tests" />
+                                 </children>
+                              </VBox>
+
+                              <VBox styleClass="card, hover-lift, spacing-md" GridPane.columnIndex="1">
+                                 <children>
+                                    <Text styleClass="header-text" text="🩸 Blood Bank" />
+                                    <Text styleClass="body-text" text="Blood donation and requests" />
+                                    <Button fx:id="bloodBankBtn" mnemonicParsing="false" onAction="#gotoBloodBank" styleClass="btn, btn-primary" text="Blood Services" />
+                                 </children>
+                              </VBox>
+
+                              <VBox styleClass="card, hover-lift, spacing-md" GridPane.columnIndex="2">
+                                 <children>
+                                    <Text styleClass="header-text" text="🏥 ICU &amp; Beds" />
+                                    <Text styleClass="body-text" text="Check bed availability" />
+                                    <Button fx:id="icuBedsBtn" mnemonicParsing="false" onAction="#gotoICUBeds" styleClass="btn, btn-primary" text="Check Beds" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </VBox>
+
+                  <!-- Education Services Section -->
+                  <VBox styleClass="spacing-lg, animate-slide-up">
+                     <children>
+                        <Text styleClass="header-text" text="Education Services">
+                           <font>
+                              <Font name="Segoe UI Semibold" size="24.0" />
+                           </font>
+                        </Text>
+
+                        <HBox styleClass="flex-center, spacing-lg">
+                           <children>
+                              <VBox styleClass="card, hover-lift, spacing-md">
+                                 <children>
+                                    <Text styleClass="header-text" text="📚 Library" />
+                                    <Text styleClass="body-text" text="Access digital library resources" />
+                                    <Button fx:id="libraryBtn" mnemonicParsing="false" onAction="#gotoLibrary" styleClass="btn, btn-primary" text="Browse Library" />
+                                 </children>
+                              </VBox>
+
+                              <VBox styleClass="card, hover-lift, spacing-md">
+                                 <children>
+                                    <Text styleClass="header-text" text="👨‍🏫 Find Tutors" />
+                                    <Text styleClass="body-text" text="Connect with qualified tutors" />
+                                    <Button fx:id="tutorsBtn" mnemonicParsing="false" onAction="#gotoTutors" styleClass="btn, btn-primary" text="Find Tutors" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+
+                  <!-- Exploration Services Section -->
+                  <VBox styleClass="spacing-lg, animate-slide-up">
+                     <children>
+                        <Text styleClass="header-text" text="Exploration Services">
+                           <font>
+                              <Font name="Segoe UI Semibold" size="24.0" />
+                           </font>
+                        </Text>
+
+                        <HBox styleClass="flex-center, spacing-lg">
+                           <children>
+                              <VBox styleClass="card, hover-lift, spacing-md">
+                                 <children>
+                                    <Text styleClass="header-text" text="🚗 Parking" />
+                                    <Text styleClass="body-text" text="Find and book parking slots" />
+                                    <Button fx:id="parkingBtn" mnemonicParsing="false" onAction="#gotoParking" styleClass="btn, btn-primary" text="Find Parking" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </center>
+
+   <!-- Footer -->
+   <bottom>
+      <VBox styleClass="padding-md">
+         <children>
+            <HBox styleClass="flex-center, spacing-lg">
+               <children>
+                  <Button fx:id="userchat" mnemonicParsing="false" onAction="#openuserchatui" styleClass="btn, btn-outline" text="Open Chat" />
+                  <Button fx:id="loginBtn" mnemonicParsing="false" onAction="#gotoLogin" styleClass="btn, btn-outline" text="Login" />
+                  <Button fx:id="signUpBtn" mnemonicParsing="false" onAction="#gotoSignUp" styleClass="btn, btn-primary" text="Sign Up" />
+                  <Button fx:id="backBtn" mnemonicParsing="false" onAction="#gotoHome" styleClass="btn, btn-ghost" text="← Back to Home" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </bottom>
+</BorderPane>

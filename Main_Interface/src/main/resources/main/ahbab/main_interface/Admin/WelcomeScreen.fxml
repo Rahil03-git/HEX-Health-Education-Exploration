@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="494.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.ahbab.main_interface.Admin.AdminScreenController">
+   <children>
+      <Label layoutX="275.0" layoutY="14.0" text="Welcome Admin!!!">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="76.0" text="Select Management">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="HealthServices" layoutX="55.0" layoutY="129.0" mnemonicParsing="false" onAction="#HealthScreen" text="Health" />
+      <Button fx:id="EducationServices" layoutX="152.0" layoutY="129.0" mnemonicParsing="false" onAction="#EducationScreen" text="Education" />
+      <Button fx:id="OtherServices" layoutX="266.0" layoutY="129.0" mnemonicParsing="false" onAction="#Others" text="Other Services" />
+      <Button fx:id="logout" layoutX="603.0" layoutY="439.0" mnemonicParsing="false" onAction="#AdminLogin" text="Log Out" />
+   </children>
+</AnchorPane>

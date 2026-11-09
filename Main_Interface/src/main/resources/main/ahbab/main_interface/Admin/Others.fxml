@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="600.0" styleClass="gradient-background-purple" stylesheets="@../styles/modern.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.ahbab.main_interface.Admin.OthersController">
+   <children>
+      <ImageView fx:id="pic3" fitHeight="75.0" fitWidth="82.0" layoutX="263.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pic3.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="text1" layoutX="259.0" layoutY="91.0" styleClass="header-text" text="Other Services">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="Reloadpark" layoutX="18.0" layoutY="14.0" mnemonicParsing="false" onAction="#loadParkingData" styleClass="modern-button, info-button" text="Load Parking Database" />
+      <Button fx:id="backid" layoutX="31.0" layoutY="444.0" mnemonicParsing="false" onAction="#gotoadminlogin" styleClass="modern-button, secondary-button" text="Back" />
+      <Button fx:id="pinger" layoutX="355.0" layoutY="14.0" mnemonicParsing="false" onAction="#openchatUI" styleClass="modern-button, warning-button" text="Send Notification" />
+      <Button fx:id="Delete" layoutX="527.0" layoutY="444.0" mnemonicParsing="false" onAction="#Delete" styleClass="modern-button, danger-button" text="Delete" />
+      <Button fx:id="Update" layoutX="471.0" layoutY="444.0" mnemonicParsing="false" onAction="#UpdateData" styleClass="modern-button, success-button" text="Insert" />
+      <TableView fx:id="ParkingTable" layoutX="31.0" layoutY="118.0" prefHeight="152.0" prefWidth="558.0" styleClass="modern-table">
+        <columns>
+          <TableColumn fx:id="Slot" prefWidth="75.0" text="Slot" />
+          <TableColumn fx:id="Area" prefWidth="298.0" text="Area" />
+            <TableColumn fx:id="Location" prefWidth="184.0" text="Location" />
+        </columns>
+      </TableView>
+      <TextField fx:id="dataTextField" alignment="CENTER" layoutX="31.0" layoutY="297.0" prefHeight="25.0" prefWidth="558.0" promptText="Enter the data you want to delete/update" styleClass="modern-text-field" />
+      <TextField fx:id="AreaTextField" alignment="CENTER" layoutX="31.0" layoutY="336.0" prefHeight="25.0" prefWidth="558.0" promptText="Enter Area to Update" styleClass="modern-text-field" />
+      <TextField fx:id="LocationTextField" alignment="CENTER" layoutX="31.0" layoutY="375.0" prefHeight="25.0" prefWidth="558.0" promptText="Enter Location to update" styleClass="modern-text-field" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="800.0" prefWidth="1200.0" styleClass="gradient-background-blue" stylesheets="@styles/modern.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.ahbab.main_interface.UserSignUpController">
+   <center>
+      <VBox styleClass="flex-center">
+         <children>
+            <VBox styleClass="card, animate-slide-left">
+               <children>
+                  <!-- Header -->
+                  <VBox styleClass="card-header">
+                     <children>
+                        <Text styleClass="header-text" text="Create Account">
+                           <font>
+                              <Font name="Segoe UI Bold" size="32.0" />
+                           </font>
+                        </Text>
+                        <Text styleClass="subheader-text" text="Join the H.E.X community">
+                           <font>
+                              <Font name="Segoe UI" size="16.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+
+                  <!-- Registration Form -->
+                  <VBox styleClass="flex-column">
+                     <children>
+                        <VBox styleClass="form-group">
+                           <children>
+                              <Label styleClass="form-label" text="Full Name">
+                                 <font>
+                                    <Font name="Segoe UI Semibold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="nameField" promptText="Enter your full name" styleClass="text-field" />
+                           </children>
+                        </VBox>
+
+                        <VBox styleClass="form-group">
+                           <children>
+                              <Label styleClass="form-label" text="Username">
+                                 <font>
+                                    <Font name="Segoe UI Semibold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="usernameField" promptText="Choose a username" styleClass="text-field" />
+                           </children>
+                        </VBox>
+
+                        <VBox styleClass="form-group">
+                           <children>
+                              <Label styleClass="form-label" text="Email">
+                                 <font>
+                                    <Font name="Segoe UI Semibold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="emailField" promptText="Enter your email" styleClass="text-field" />
+                           </children>
+                        </VBox>
+
+                        <VBox styleClass="form-group">
+                           <children>
+                              <Label styleClass="form-label" text="Password">
+                                 <font>
+                                    <Font name="Segoe UI Semibold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <PasswordField fx:id="passwordField" promptText="Create a strong password" styleClass="password-field" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+
+                  <!-- Action Buttons -->
+                  <VBox styleClass="spacing-md">
+                     <children>
+                        <Button fx:id="signUpBtn" mnemonicParsing="false" onAction="#handleSignUp" prefHeight="48.0" prefWidth="240.0" styleClass="btn, btn-primary, hover-lift" text="Create Account" />
+
+                        <Button fx:id="loginBtn" mnemonicParsing="false" onAction="#handleLogin" prefHeight="44.0" prefWidth="240.0" styleClass="btn, btn-outline, hover-lift" text="Already have an account?" />
+                     </children>
+                  </VBox>
+
+                  <!-- Back Button -->
+                  <Button fx:id="backBtn" mnemonicParsing="false" onAction="#handleBack" styleClass="btn, btn-ghost" text="← Back to Home" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
