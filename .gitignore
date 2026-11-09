@@ -1,0 +1,28 @@
+# Maven / Java build output
+target/
+!.mvn/wrapper/maven-wrapper.jar
+*.class
+*.log
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# VS Code
+.vscode/
+
+# Eclipse / NetBeans
+.classpath
+.project
+.settings/
+nbproject/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local copy of the JDBC driver (Maven downloads it automatically)
+mysql-connector-j-*.jar
